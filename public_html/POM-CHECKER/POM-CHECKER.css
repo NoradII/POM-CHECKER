@@ -1,0 +1,382 @@
+/*
+- Colors
+main color : #222e38;
+title background color : #E6E6E6;
+title font color : #333333;
+border : #b3b3b3;
+footer point color : #00ffff;
+
+patient list border color : #999999;
+
+*/
+
+/*------------------------------------*\
+  Common / Spacing
+\*------------------------------------*/
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  color : #333;
+}
+
+.mt-2{
+  margin-top: 2px;
+}
+
+.pl-0{
+  padding-left: 0;
+}
+
+.pl-5{
+  padding-left: 5px;
+}
+
+.pr-0{
+  padding-right: 0;
+}
+
+.mt-15{
+  margin-top: 15px;
+}
+
+.mt-10{
+  margin-top: 10px;
+}
+
+.mt-5{
+  margin-top: 5px;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+.mr-15{
+  margin-right: 15px;
+}
+
+.pr-25{
+  padding-right: 25px;
+}
+/*------------------------------------*\
+  Common
+\*------------------------------------*/
+
+/*------------------------------------*\
+  top navigation
+\*------------------------------------*/
+
+/*--drop down menu--*/
+
+.navbar-right{
+  margin-right: 15px;
+}
+
+.nav.navbar-nav>li>a{
+  color: #fff !important;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+  background-color: #222e38;
+  border : none;
+
+}
+
+.dropdown-menu>li>a{
+  color: #fff !important;
+}
+
+.navbar-nav .open .dropdown-menu{
+  background-color: #222e38;
+  border : none;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    background-color: #222e38;
+      opacity: 0.8;
+}
+
+/*--/drop down menu--*/
+/*------------------------------------*\
+  top navigation
+\*------------------------------------*/
+
+/*------------------------------------*\
+  Contents
+\*------------------------------------*/
+/*--title section--*/
+.panel-default>.panel-background, .title-section{
+  background-color: #E6E6E6;
+  color: #333333;
+  padding: 5px 15px;
+  border-bottom: 1px solid #b3b3b3;
+  height: 50px;
+}
+
+.panel-default>.panel-background h4, .title-section h4{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin
+}
+
+/*--/title section--*/
+
+/*--Content Common--*/
+.baseinfo > b
+{
+  color: #222e38;
+}
+
+.panel{
+  border : none;
+}
+
+.btn-main-color{
+  background-color: #222e38;
+  color : #fff;
+}
+
+.btn-main-color:focus, .btn-main-color:hover{
+  background-color: #222e38;
+  opacity: 0.8;
+  color : #fff;
+}
+
+/*--/Content Common--*/
+
+/*--patientListContainer--*/
+#patientListContainer{
+  padding-right: 0;
+  border-right : 1px solid #b3b3b3;
+}
+
+#searchName{
+  border-radius: 4px; 
+  border: 1px solid #b3b3b3;
+}
+/*--/patientListContainer--*/
+
+/*--historyContainer--*/
+#historyContainer{
+  padding-left: 0;
+  padding-right: 0;
+  border-right:  1px solid #b3b3b3;
+}
+
+/*--/historyContainer--*/
+
+/*--measurementContainer--*/
+.title-section-border-top{
+  border-top : 1px solid #b3b3b3;
+}
+
+/*--BeforeMeasurement--*/
+#BeforeMeasurement{
+  max-height: 300px; 
+  height: 300px; 
+  overflow-y: scroll; 
+  padding-left : 5px;
+}
+
+/*--/BeforeMeasurement--*/
+
+/*--AfterMeasurement--*/
+#AfterMeasurement{
+  max-height: 300px; 
+  height: 300px; 
+  overflow-y: scroll; 
+  padding-left : 5px;
+}
+/*--/AfterMeasurement--*/
+
+/*--/measurementContainer--*/
+
+/*------------------------------------*\
+  Contents
+\*------------------------------------*/
+
+/*------------------------------------*\
+  Modal
+\*------------------------------------*/
+
+.modal-header{
+  border-bottom: none;
+  padding: 15px 0px 0px 0px;
+}
+
+.modal-title{
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/*------------------------------------*\
+  Modal
+\*------------------------------------*/
+
+/*------------------------------------*\
+  Footer
+\*------------------------------------*/
+
+footer {
+  border-top : 1px solid #b3b3b3;
+}
+
+#footer-info{
+  color : #b3b3b3;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8em;
+  margin-bottom: 0;
+}
+
+#footer-info a{
+  color: #00ffff;
+}
+
+/*------------------------------------*\
+  Footer
+\*------------------------------------*/
+
+
+.crebtn
+{
+	background-color: white;
+	font-family:sans-serif;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.panel-min
+{
+	min-height: 826px;
+	max-height: 826px;
+}
+
+.style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #E6E6E6;
+}
+
+.style-2::-webkit-scrollbar-thumb
+{
+	background-color: #b3b3b3;
+}
+
+.modal-mid{
+	width: 400px;
+}
+
+.modal-footer{
+	text-align: center;
+}
+
+.modal .control-label{
+	font-size: 15px;
+}
+
+.wating{
+	color: #ccc;
+}
+
+optgroup {
+	color: black;
+}
+
+optgroup option{
+	color: #333333;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+  	padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+		font-size: 14px;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #eb5244;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.margin-span {
+	white-space: normal;
+}
+
+#ipButton{
+	width: 65px;
+	height: 65px;
+	z-index: 12;
+ 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+ 	position: fixed;
+ 	bottom: 15px;
+ 	right: 15px;
+ 	border-radius: 50% !important;
+
+}
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+.dragColumn{
+	cursor: pointer;
+}
+
+.MeasuringCloseBtn{
+  cursor: pointer;
+}
+
+

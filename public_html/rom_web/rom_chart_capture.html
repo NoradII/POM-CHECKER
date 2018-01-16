@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+    <title>Team Elysium</title>
+    <link rel="shortcut icon" href="./image/theme/icon.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+    <link href="../cssjs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../cssjs/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Datatables -->
+    <link href="../cssjs/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../cssjs/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../cssjs/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+
+    <!-- html2Canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+    <!-- Title image -->
+    <link rel="shortcut icon" href="../image/webicon.png" />
+    <!-- Custom Theme Style -->
+    <link href="./build/css/custom.min.css" rel="stylesheet">
+    <script>document.write("<link href='./rom_chart_capture.css?version=" + Date.now() + "' rel='stylesheet'");</script>
+
+  </head>
+
+  <body class="html-body" >
+    
+    <div id="authcode-container">      
+      <div class="authcode-page">
+        <div class="form">
+          <h4>인증번호입력</h4>
+          <form class="authcode-form" style="margin-bottom : 15px;">
+            <label for="InputAuthcode" style="color : #999999; padding-bottom: 15px;">전송된 인증번호를 입력해주세요.</label>
+            <input type="text" class="form-control" id="InputAuthcode" aria-describedby="authHelp" placeholder="Enter AuthCode">
+          </form>          
+          <button onclick="checkAuthcode()">확인</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="view-container" style='page-break-before:always; display:none'>
+
+       <div class="container" style='page-break-before:always'>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title header">
+                    <img src="../image/white_logo.png"/ class="logoimg">
+                 </div>
+                </div>
+              
+                <div class="x_content">
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 profile_details">
+                      <h2 class="brief">환자 정보</h2>
+                      <div class="profile_view info_container">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                          <div class="row patient_info">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                              <p><strong><span class="patienttext">병원</span></strong><span id="hospitalid"> -- </span></p>
+                              <p><strong><span class="patienttext">병록번호</span></strong><span  id="patient_number">No. </span></p>
+                            </div>
+                            
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                              <p><strong><span class="patienttext">이름</span></strong><span id="patient_name"> -- </span></p>
+                              <p><strong><span class="patienttext">성별</span></strong> <span id="patient_gender"> -- </span> </p>
+                            </div>
+                            
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                               <p><strong><span class="patienttext">생년월일</span></strong> <span id="patient_birth"> -- </span> </p>
+                              <p><strong><span class="patienttext">환자측정부위</span></strong> <span id="jointdirection"> -- </span> </p>
+                              <p style="display:none"><strong>hashid</strong> <strong id="patient_id"></strong>  </p>
+                              <p style="display:none"><strong>patient name</strong> <strong id="patientid"></strong>  </p>
+                            </div>                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+         <div class="container-fluid">
+        <div class="row">
+          <!-- .js -->
+          <div class="col-md-6 col-sm-12 col-xs-12" id="rom-data-chart">
+            <div class="x_panel" id="rom-data-chart-panel" style="">
+              <h2 class="brief"> 측정 결과 그래프 </h2>
+              <div class="x_content">
+                <div id="chartcontainer">
+                  <canvas id="myChart" height="180px"></canvas>
+                  <canvas id="myChart2" style="display: none" height="180px"></canvas>
+                  <canvas id="myChart3" style="display: none" height="180px"></canvas>
+                </div>
+                
+                <div class="row" id="calendarcontainer">
+                  
+                  <div id="mobile-calendar">
+                    <div class="calendar col-md-3 col-sm-12 col-xs-12" id="minicalendar" style="display:none;">
+                      <!-- Calendar toolbar -->
+                      <div class="calendar-toolbar">
+                        <!-- Calendar "date-indicator" span -->
+                        <div class="calendar-current-date" style="font-size : 1.5em; color : #232f39; font-weight : bold;"
+                              data-month-format="YYYY.MM">
+                        </div>
+                        <!-- Calendar "prev" button -->
+                        <button data-toggle="calendar" data-action="prev" class="btn btn-default calendar-btn">
+                          <img src="../image/calendar_down.png" width="50%">
+                        </button>                                 
+                        <!-- Calendar "next" button -->
+                        <button data-toggle="calendar" data-action="next" class="btn btn-default calendar-btn">
+                          <img src="../image/calendar_up.png" width="50%">
+                        </button>                                          
+                      </div>
+                    </div>
+                    
+                    <p id="mobile-activity-log-date" style="padding-left : 15px;"></p>
+                    <div id="mobile-activity-log" class="col-sm-12 col-xs-12">
+
+                    </div>
+                  </div>
+                  
+                  
+                  
+
+                  <div class="calendar col-md-9 col-sm-12 col-xs-12" id="calendar" style="display:none">
+                    <!-- Calendar toolbar -->
+                    <div class="calendar-toolbar" style="text-align : center;">
+                      <!-- Calendar "date-indicator" span -->
+                      <div class="calendar-current-date" style="font-size : 2em; color : #232f39; font-weight : bold;" 
+                            data-month-format="YYYY.MM">
+                      </div>                               
+                      <!-- Calendar "prev" button -->
+                      <button data-toggle="calendar" data-action="prev" class="btn btn-default calendar-btn">
+                        <img src="../image/calendar_down.png" width="80%">
+                      </button>                                 
+                      <!-- Calendar "next" button -->
+                      <button data-toggle="calendar" data-action="next" class="btn btn-default calendar-btn">
+                        <img src="../image/calendar_up.png" width="80%">
+                      </button>                  
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
+            </div>
+          </div>
+
+
+          <!-- DataTable -->
+          <div class="col-md-6 col-sm-12 col-xs-12" id="rom-data-table">
+              <h2 class="brief"> 측정 결과 테이블 </h2>
+              <div class="x_content">
+                <table data-order='[[ 0, "desc"]]' id="rom-datatable" class="table table-striped table-bordered">
+                  <thead>
+                    <tr>
+                      <th id="rom-table-thead-date">Date</th>
+                      <th id="rom-table-thead-angle">Angle</th>
+                      <th id="rom-table-thead-variation">Variation</th>
+                      <th id="rom-table-thead-number">Pain</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="table_tbody">
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td id="rom-table-tbody-number"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="clearfix"></div>
+
+      <!-- footer content -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="copyright">
+              COPYRIGHT © <a href="http://www.teamelysium.kr"><b>Team Elysium Inc.</b></a> ALL RIGHTS RESERVED
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <!-- /footer content -->
+
+      <div id="savePart"></div>
+
+    </div>
+    
+      <!-- jQuery -->
+
+      <script src="../cssjs/jquery/dist/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+      <!-- Bootstrap -->
+      <script src="../cssjs/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- Chart.js -->
+      <script src="../cssjs/Chart.js/dist/Chart.min.js"></script>
+      <script>document.write("<script type='text/javascript' src='./rom_chart_capture.js?version=" + Date.now() + "'><\/script>");</script>
+      <!-- Paper.js -->
+      <script src="../node_modules/paper/dist/paper-full.js"></script>
+      <!-- Datatables -->
+      <script src="../cssjs/datatables.net/js/jquery.dataTables.min.js"></script>
+      <script src="../cssjs/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+      <script src="../cssjs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+      <script src="../cssjs/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+      <script src="../cssjs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+      <script src="../cssjs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+      <script src="../cssjs/datatables.net-buttons/js/buttons.print.min.js"></script>
+      <script src="../cssjs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+      <script src="../cssjs/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+      <script src="../cssjs/moment.js/moment.js"></script>
+
+      <!-- Custom Theme Scripts -->
+      <script src="./build/js/custom.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,630 @@
+/* -------------------Media Query------------------- */
+
+@media only screen and (max-width: 768px){
+
+  .profile_details .profile_view {
+      padding: 6%;
+      font-size: 0.9em;
+  }
+  
+  .patienttext{
+    width : 33%;
+  }  
+  
+  .header{
+    background-color: #222e38;
+    height: 50px;
+    text-align : center;
+    line-height : 50px;
+  }
+  
+  .logoimg{
+    width: 20vw;    
+  }
+  
+  .brief{
+    height: 50px;
+    background-color: #f3f3f3; 
+    color: #333333; 
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin : 0;
+    border-top : 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  
+  #minicalendar tr{
+    background-color: #fff;
+  }
+  
+  #minicalendar{
+    background-color: #fff;
+    z-index : 999;    
+    margin-bottom : 10px;
+  }
+  
+  #minicalendar span{
+   font-size : 2em;
+  }
+  
+  #mobile-activity-log{
+    height : 200px;
+    overflow-y : scroll;
+  }
+  
+  #minicalendar .calendar-month-row {
+    height : 90px;
+    color: #232f39;
+    font-weight: bold;
+    font-size: 0.5em;
+  }
+
+}
+
+@media only screen and (min-width: 768px){
+  .profile_details .profile_view{
+    padding: 25px 50px 0px 50px;
+  }
+  
+  .patienttext{
+    width : 30%;
+  }  
+  
+  .header{
+    background-color: #222e38;
+    height: 111px;
+  }
+  
+  .logoimg{
+    width:130px; 
+    margin-left : 40px; 
+    margin-top : 24px;
+  }
+  
+  .brief{
+    height: 50px;
+    background-color: #f3f3f3; 
+    color: #333333; 
+    padding-top: 15px;
+    padding-left: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin : 0;
+    border-top : 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+  }
+  
+  #minicalendar tr{
+    background-color: #f3f3f3;
+  }
+  
+  
+  #minicalendar .calendar-month-row {
+    height : 60px;
+    color: #232f39;
+    font-weight: bold;
+    font-size: 0.5em;
+  }
+
+}
+/* -------------------Media Query------------------- */
+
+/* -------------------common------------------- */
+
+html, body {
+  height: 100%;
+  margin: auto;
+  color: #333333;
+}
+
+html{
+  margin : 0 auto;
+  padding : 0;
+  overflow-x : hidden;
+}
+  
+body{
+  margin : 0 auto;
+  overflow-x : hidden;
+  width : 100vw;
+}
+
+table tbody tr, table thead th:first-child {
+  cursor: pointer;
+}
+
+span {
+  display:inline-block
+}
+
+@media print {
+  no-print-page {
+    display: none;
+  }
+}
+
+.x_panel{
+  padding: 0;
+  border : none;
+}
+
+.x_title{
+  padding: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.x_content{
+  padding: 0;
+  margin-top: 0;
+}
+
+.container-fluid{
+  padding: 0;
+}
+
+.well{
+  border : none;
+}
+
+  .x_panel, .x_title {
+    margin-bottom: 0px;
+  }
+
+/* -------------------common------------------- */
+
+/* -------------------header------------------- */
+
+
+.goMainPage{
+  margin-top: 40px;
+  width: 200px;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.goMainPage img{
+  padding-bottom: 5px;
+  margin-left: 2px;
+}
+
+/* -------------------header------------------- */
+
+/* -------------------content-------------------*/
+
+
+.custom-btn{
+  padding: 0;
+  border : none;
+  background-color: Transparent;
+
+}
+
+.title_toggle {
+  cursor: pointer;
+}
+
+/* -----info_container----- */
+
+
+.profile_view {
+  width: 100%;
+}
+
+.info_container p{
+  font-size: 1.1em;
+}
+
+
+.patient_info{
+  padding-top : 4px;
+}
+
+#select_container{
+  font-size: 14px;
+  font-style: normal;
+  font-family: sans-serif;
+}
+
+.select2-container--default .select2-selection--single{
+  min-height: 22px;
+  border : 1px solid #b3b3b3;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  height:25px ;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  color: #999999;
+  padding-top: 0px;
+}
+
+.nav-pills{
+  margin-left: 10px;
+  margin-top : 15px;
+  font-size: 13.5px;
+  font-style: normal;
+  font-family: sans-serif;
+  color: black;
+}
+
+.dropdown{
+  margin-right: 5px;
+  text-align: center;
+  text-align: -webkit-right;
+}
+
+#drop1-wrapper, #drop2-wrapper{
+  width: 40%;
+}
+
+#drop2 {
+  width: 100%;
+}
+
+.print-btn img{
+  width: 80%;
+  height: 80%;
+  padding-top: 1px;
+}
+
+#patient_name, #patient_number, #patient_gender, #patient_birth{
+  font-size: 13.5px;
+  font-style: normal;
+  font-family: sans-serif;
+  color: black;
+}
+
+#print_container{
+  text-align: end;
+  text-align: -webkit-right;
+}
+
+/* -----info_container----- */
+
+/* -----rom-data-chart----- */
+
+#rom-data-chart{
+  padding-right: 0;
+
+}
+
+#rom-data-chart-panel{
+  height: 90%;
+}
+
+#rom-data-chart-panel canvas
+{
+  padding: 20px;
+}
+
+#chartcontainer{
+  position: relative;
+  margin: auto;
+  height: 70vh;
+}
+
+/* --exercise calendar-- */
+.calendar-toolbar {
+  margin-bottom: 10px;
+}
+
+.calendar-prior-months-date {
+  opacity: 0;
+}
+
+.calendar-current-date {
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+}
+
+.calendar-btn{
+  border : none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+#calendar .calendar-month-row {
+  max-height : 120px;
+  font-weight: bold;
+  color: #232f39;
+}
+#calendar .calendar-date{
+  padding-left: 7px;
+}
+
+
+#calendar .calendar-month-row td{
+  border : 1px solid #cecece;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 3px;
+  width: 100px;
+}
+
+#calendar .calendar-month-row .calendar-exerciselog-box{
+  height : 108px;
+  overflow-y : auto;
+}
+
+#minicalendar .calendar-month-row td{
+   padding-top: 3px;
+}
+
+#calendar .calendar-day{
+  background-color: #232f39;
+  color: #fff;
+  height: 10px;
+  text-align: center;
+  border-right: none;
+}
+#minicalendar .calendar-day{
+  background-color: #232f39;
+  color: #fff;
+  height: 5px;
+  font-size: 0.5em;
+  text-align: center;
+  border-right: none;
+}
+
+#calendar .calendar-sun{
+  color: #ff8430;
+}
+
+#calendar .calendar-sat{
+  color: #00cafb;
+}
+#minicalendar .calendar-sun{
+  color: #ff8430;
+}
+
+#minicalendar .calendar-sat{
+  color: #00cafb;
+}
+
+#calendar{
+  border-left: 1px solid #b3b3b3;
+  padding-left: 0;
+}
+
+
+.activity-log{
+  color : #fff;
+  height: 27px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#calendar .calendar-today{
+  background-color: #f3f5f9;
+}
+
+#minicalendar, #calendar{
+  padding-top: 15px;
+}
+
+#calendarcontainer{
+  margin-right: 0;
+}
+/* --exercise calendar-- */
+/* -----rom-data-chart----- */
+
+/* -----rom-data-table----- */
+
+@media only screen and (min-width: 768px) {
+  table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting{
+    padding-right: 30px;
+  }
+  
+  #rom-table-thead-number{
+    width: 20px;
+  }
+  
+  #rom-table-thead-angle{
+    width: 80px;
+  }
+  
+  #rom-table-thead-date{
+    width: 80px;
+  }
+  
+  #rom-table-thead-variation{
+    width: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  table.dataTable thead>tr>th.sorting_asc, table.dataTable thead>tr>th.sorting_desc, table.dataTable thead>tr>th.sorting, table.dataTable thead>tr>td.sorting_asc, table.dataTable thead>tr>td.sorting_desc, table.dataTable thead>tr>td.sorting{
+    padding-right: 0px;
+  }
+  
+   #rom-table-thead-number{
+    width: 30px;
+  }
+  
+  #rom-table-thead-angle{
+    width: 50px;
+  }
+  
+  #rom-table-thead-date{
+    width: 80px;
+  }
+  
+  #rom-table-thead-variation{
+    width: 50px;
+  }
+  table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting:after{
+    content : none;
+  }
+}
+
+#rom-data-table{
+  height: auto;
+  padding-left: 0;
+  border-left: 1px solid #b3b3b3;
+}
+
+#rom-data-table-panel{
+  height: 600px;
+}
+
+#rom-datatable_wrapper{
+  padding : 40px 40px 0 40px;
+}
+
+#rom-datatable_wrapper table{
+  border-color: #222e38;
+}
+
+#rom-datatable_wrapper table thead th{
+  background-color: #222e38;
+  color : #fff;
+}
+
+#rom-datatable_wrapper table tbody{
+  text-align : center;
+  background-color: none;
+}
+
+.table-bordered>tbody>tr>td{
+  border-right : 1px solid #222e38;
+}
+
+
+/* -----rom-data-table----- */
+
+
+/* -------------------content------------------- */
+
+/* -------------------footer------------------- */
+
+.copyright{
+  color : #b3b3b3;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.copyright a{
+  color: #00ffff;
+}
+
+/* -------------------footer------------------- */
+
+/* -------------------authcode container------------------- */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+@media only screen and (min-width: 768px){ 
+  /*default*/  
+  .authcode-page {
+    width: 360px;
+    padding: 16% 0 0;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 768px){ 
+  /*mobile*/
+  .authcode-page {
+    width: 90%;
+    padding: 45% 0 0;
+    margin: 0px 5%;
+  }
+}
+
+#authcode-container{
+  height : 100vh;
+  background-color : #222e38;
+  font-family: "Roboto", sans-serif;
+}
+
+#authcode-container h4{
+  margin-top : 0;
+  color : #3a3a3a;
+  font-weight : bold;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #3a3a3a;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  opacity : 0.8;
+}
+/* -------------------authcode container------------------- */
+
+#download_container{
+  text-align: end;
+  text-align: -webkit-right;
+}
+
+.selection {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00d2a5;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.div_container:hover .overlay {
+  height: 25%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
