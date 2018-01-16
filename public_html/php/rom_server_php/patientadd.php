@@ -19,7 +19,6 @@
 		$connection = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
 		// $connection = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
 		// $return_arr = Array();
-
 		// $result = mysqli_query($connection,
 		// 	"INSERT INTO rom_patient(patientid, name, sex, birth, number, lastupdate, phone)
 		// 	values('".$patientid."', '".$name."', '".$sex."', '".$birth."', '".$number."', now() , '".$phone."')");
@@ -27,6 +26,7 @@
 		$stmt->bind_param("ssssss",$patientid,$name,$sex,$birth,$number,$phone);
 		$stmt->execute();
 		$stmt->close();
+
 	}
 	else
 	{
